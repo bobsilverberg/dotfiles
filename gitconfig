@@ -1,0 +1,12 @@
+[user]
+	email = bob.silverberg@gmail.com
+	name = Bob Silverberg
+[github]
+	user = bobsilverberg
+	token = 397ef70f444687565675a84c6a658fa5
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = /Users/robertsilverberg/.gitignore
