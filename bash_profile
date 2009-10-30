@@ -1,6 +1,8 @@
 alias gr='cd /Users/robertsilverberg/Documents/gitRepos'
 alias hm='cd /Users/robertsilverberg'
 alias gs='git status'
+alias dtup="cd ~/tempGitRepos/dotfiles; git add .; git commit -m 'updating dotfiles'; git push"
+alias dtdn="cd ~/gitRepos/dotfiles; git pull"
 export HISTCONTROL=erasedups
 
 ##### put git branch & status in prompt
@@ -26,7 +28,7 @@ function parse_git_branch {
 function set_prompt {
   export PS1="${COLOR_NONE}\w${RED}$(parse_git_branch)${COLOR_NONE}$ "
 }
-# PROMPT_COMMAND='set_prompt'
+PROMPT_COMMAND='set_prompt'
 
 
 
