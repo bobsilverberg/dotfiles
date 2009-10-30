@@ -2,7 +2,7 @@ alias gr='cd /Users/robertsilverberg/Documents/gitRepos'
 alias hm='cd /Users/robertsilverberg'
 alias gs='git status'
 alias dtup="cd ~/tempGitRepos/dotfiles; git add .; git commit -m 'updating dotfiles'; git push"
-alias dtdn="cd ~/Documents/gitRepos/dotfiles; git pull"
+alias dtdn="cd ~/Documents/gitRepos/dotfiles; git pull origin master"
 export HISTCONTROL=erasedups
 
 ##### put git branch & status in prompt
