@@ -26,7 +26,7 @@ function parse_git_branch {
 function set_prompt {
   export PS1="${COLOR_NONE}\w${RED}$(parse_git_branch)${COLOR_NONE}$ "
 }
-PROMPT_COMMAND='set_prompt'
+# PROMPT_COMMAND='set_prompt'
 
 
 
