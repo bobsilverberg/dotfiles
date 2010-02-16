@@ -3,6 +3,9 @@ alias hm='cd /Users/robertsilverberg'
 alias gs='git status'
 alias dtup="cd ~/tempGitRepos/dotfiles; git add .; git commit -m 'updating dotfiles'; git push"
 alias dtdn="cd ~/Documents/gitRepos/dotfiles; git pull origin master"
+alias cf8="cd /Library/Webserver/Documents/; mv CFIDE_CF8 CFIDE; /Applications/JRun4/bin/jrun -start cfusion; mv CFIDE CFIDE_CF8; hm;"
+alias cf9u1="cd /Library/Webserver/Documents/; mv CFIDE_CF9 CFIDE; /Developer/CF9/bin/jrun -start cfusion; mv CFIDE CFIDE_CF9; hm;"
+alias cf9="cd /Applications/ColdFusion9/bin/; ./coldfusion start"
 export HISTCONTROL=erasedups
 
 ##### put git branch & status in prompt
@@ -30,6 +33,7 @@ function set_prompt {
 }
 PROMPT_COMMAND='set_prompt'
 
+source ~/.git-completion.bash
 
 
 
