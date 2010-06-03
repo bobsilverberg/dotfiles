@@ -5,8 +5,13 @@ alias dtup="cd ~/tempGitRepos/dotfiles; git add .; git commit -m 'updating dotfi
 alias dtdn="cd ~/Documents/gitRepos/dotfiles; git pull origin master"
 alias cf8="cd /Library/Webserver/Documents/; mv CFIDE_CF8 CFIDE; /Applications/JRun4/bin/jrun -start cfusion; mv CFIDE CFIDE_CF8; hm;"
 alias cf9u1="cd /Library/Webserver/Documents/; mv CFIDE_CF9 CFIDE; /Developer/CF9/bin/jrun -start cfusion; mv CFIDE CFIDE_CF9; hm;"
-alias cf9="cd /Applications/ColdFusion9/bin/; ./coldfusion start"
+alias cf9="cd /Library/Webserver/Documents/; mv CFIDE_CF90 CFIDE; /Developer/CF9.0/bin/jrun -start cfusion; mv CFIDE CFIDE_CF90; hm;"
+#alias cf9="cd /Applications/ColdFusion9/bin/; ./coldfusion start"
+#alias cf9stop="cd /Applications/ColdFusion9/bin/; ./coldfusion stop"
 export HISTCONTROL=erasedups
+
+# Make TextMate the default editor
+export EDITOR="/usr/bin/mate -w" 
 
 ##### put git branch & status in prompt
  
