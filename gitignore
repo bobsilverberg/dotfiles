@@ -9,6 +9,13 @@
 !.gitignore
 settings.xml
 *.transfer
+*.zip
+pytest.ini
+mine/*
+Cache/
+Cache.Trash*/
+
+
 
 
 
