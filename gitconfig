@@ -3,11 +3,14 @@
 	name = Bob Silverberg
 [github]
 	user = bobsilverberg
-	token = 397ef70f444687565675a84c6a658fa5
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 [core]
-	excludesfile = /Users/robertsilverberg/.gitignore
+	excludesfile = /Users/bsilverberg/.gitignore
 	editor = mate -w
+	autocrlf = input
+[init]
+	templatedir = /usr/local/git/share/git-core/templates
+

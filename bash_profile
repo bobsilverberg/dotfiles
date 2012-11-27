@@ -1,5 +1,5 @@
-alias gr='cd /Users/robertsilverberg/Documents/gitRepos'
-alias hm='cd /Users/robertsilverberg'
+alias gr='cd /Users/bsilverberg/gitRepos'
+alias hm='cd /Users/bsilverberg'
 alias gs='git status'
 alias co='git checkout'
 alias ga='git add -A'
@@ -47,30 +47,8 @@ PROMPT_COMMAND='set_prompt'
 
 source ~/.git-completion.bash
 
-
-# Setting PATH for Python 3.2
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.2/bin:${PATH}"
-export PATH
-
-export PATH="./bin:$PATH" 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-export PATH="/Users/robertsilverberg/Documents/gitRepos/depot_tools:${PATH}"
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-PATH="/System/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
-export PATH
-
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-
-
-##
-# Your previous /Users/robertsilverberg/.bash_profile file was backed up as /Users/robertsilverberg/.bash_profile.macports-saved_2012-07-20_at_09:23:12
-##
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 
