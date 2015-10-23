@@ -1,13 +1,5 @@
-alias b2gdt='gaiatest --testvars=mine/b2g.gaia.hamachi.json --type=b2g --app=b2gdesktop --binary=/Applications/B2G.app/Contents/MacOS/b2g-bin --profile=/Applications/B2G.app/Contents/MacOS/gaia/profile --restart --html-output=results/index.html'
-alias b2gh='gaiatest --address=localhost:2828 --testvars=mine/b2g.gaia.hamachi.json --restart --html-output=results/index.html'
-alias b2gf='gaiatest --address=localhost:2828 --testvars=mine/b2g.gaia.flame.json --restart --html-output=results/index.html'
-alias b2gi='gaiatest --address=localhost:2828 --testvars=mine/b2g.gaia.inari.json --restart --html-output=results/index.html'
-alias b2gm='gaiatest --address=localhost:2828 --testvars=mine/b2g.gaia.mozilla.json --restart --html-output=results/index.html'
-alias gr='cd /Users/bsilverberg/gitRepos'
+alias gr='cd /Users/bsilverberg/Documents/gitRepos'
 alias hm='cd /Users/bsilverberg'
-
-# for hubusr
-alias git=hub
 
 alias gs='git status'
 alias co='git checkout'
@@ -16,25 +8,13 @@ alias ga='git add -A'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gm='git merge'
-alias gpm='git push origin master'
-alias gpm='git push origin develop'
-alias gppv101='git pull upstream v1.0.1; git push origin v1.0.1; git push upstream v1.0.1'
-alias gppv1t='git pull upstream v1-train; git push origin v1-train; git push upstream v1-train'
-alias gppm='git pull upstream master; git push origin master; git push upstream master'
-alias dtup="cd ~/tempGitRepos/dotfiles; git add .; git commit -m 'updating dotfiles'; git push"
+alias dtup="cd ~/Documents/gitRepos/dotfiles; git add .; git commit -m 'updating dotfiles'; git push"
 alias dtdn="cd ~/Documents/gitRepos/dotfiles; git pull origin master"
-alias cf8="cd /Library/Webserver/Documents/; mv CFIDE_CF8 CFIDE; /Applications/JRun4/bin/jrun -start cfusion; mv CFIDE CFIDE_CF8; hm;"
-alias cf9u1="cd /Library/Webserver/Documents/; mv CFIDE_CF9 CFIDE; /Developer/CF9/bin/jrun -start cfusion; mv CFIDE CFIDE_CF9; hm;"
-alias cf9="cd /Library/Webserver/Documents/; mv CFIDE_CF90 CFIDE; /Developer/CF9.0/bin/jrun -start cfusion; mv CFIDE CFIDE_CF90; hm;"
-#alias cf9="cd /Applications/ColdFusion9/bin/; ./coldfusion start"
-#alias cf9stop="cd /Applications/ColdFusion9/bin/; ./coldfusion stop"
-alias b2g-11="ssh webqa:mozilla@10.250.1.86"
 alias pudb='python -m pudb.run'
+
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
-
-export STACKATO_EXECUTABLE=s
 
 # Make TextMate the default editor
 export EDITOR="/usr/local/bin/mate -w" 
@@ -64,10 +44,6 @@ function gdb () {
 }
 
 
-function wget_r () {
-	wget http://qa-selenium.mv.mozilla.com:8080/view/Marketplace/job/$1/lastSuccessfulBuild/artifact/results.xml -O xml_results/$1.xml
-}
-
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
@@ -89,28 +65,20 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PATH=/usr/local/git/bin:$PATH
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 
-# MacPorts Installer addition on 2012-07-20_at_09:23:12: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
 # for node.js
 export NODE_PATH="/usr/local/lib/node"
 export PATH="/usr/local/share/npm/bin:/opt/local/lib/node_modules/less/bin:$PATH"
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 
 # for adt (b2g)
-export  PATH=/Applications/adt-bundle-mac/sdk/platform-tools:${PATH}
-export PATH=/Applications/adt-bundle-mac/sdk/tools:${PATH}
+# export  PATH=/Applications/adt-bundle-mac/sdk/platform-tools:${PATH}
+# export PATH=/Applications/adt-bundle-mac/sdk/tools:${PATH}
 
 # for android (appium)
 export ANDROID_HOME="/Applications/adt-bundle-mac/sdk"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
 
 # Get the bin for any local NodeJS module on cwd.
 export PATH="./node_modules/.bin:$PATH"
