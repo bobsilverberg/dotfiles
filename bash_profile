@@ -11,8 +11,9 @@ alias gm='git merge'
 alias dtup="cd ~/Documents/gitRepos/dotfiles; git add .; git commit -m 'updating dotfiles'; git push"
 alias dtdn="cd ~/Documents/gitRepos/dotfiles; git pull origin master"
 alias pudb='python -m pudb.run'
+alias checkex='grep -r "history.getVisits" -n .; grep -r "visitId" -n .; grep -r "referringVisitId" -n .; cd ..'
 
-export HISTCONTROL=erasedups
+export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=10000
 shopt -s histappend
 
@@ -117,3 +118,42 @@ function rmb {
     fi
   fi
 }
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+	
+export PYENV_ROOT=/usr/local/var/pyenv
+export PYTHONDONTWRITEBYTECODE=1
+
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+
+export NVM_DIR="/Users/bsilverberg/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#Path for m-c
+# export PATH="/Users/bsilverberg/mozilla-central:$PATH"
+
+source ~/hg_extensions/facebook-hg-experimental/scripts/scm-prompt.sh
+export PS1="\$(_scm_prompt)\W\$ "
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+alias android='export MOZCONFIG=~/mozilla-central/.mozconfig-android'
+alias desktop='export MOZCONFIG=~/mozilla-central/.mozconfig'
+alias arm='export MOZCONFIG=~/Firefox/mozilla-central/.mozconfig-arm'
+alias ebuild='android && ./mach build && ./mach package && ./mach install'
+alias dbuild='desktop && ./mach build'
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Wrap git automatically by adding the following to ~/.bash_profile:
+
+eval "$(hub alias -s)"
+
+# added by Anaconda2 4.4.0 installer
+# export PATH="/anaconda/bin:$PATH"
+
+export PATH="/usr/local/opt/gettext/bin:$PATH"

@@ -14,3 +14,5 @@
 [init]
 	templatedir = /usr/local/git/share/git-core/templates
 
+[credential]
+	helper = osxkeychain
